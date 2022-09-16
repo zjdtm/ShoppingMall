@@ -12,7 +12,6 @@ const Payment = lazy(() => import("./payment/Payment"));
 const ProductRegisterPage = lazy(() => import("./pages/ProductRegisterPage"));
 const ProductDetailPage = lazy(() => import("./pages/ProductDetailPage"));
 
-
 function App() {
   return (
     <>
