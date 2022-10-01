@@ -68,17 +68,3 @@ export const deleteProduct = async (ctx) => {
   await Product.findByIdAndRemove(id);
 };
 
-export const likeProduct = async (ctx) => {
-  const { id } = ctx.params;
-
-  if (!mongoose.Types.ObjectId.isValid(id)) return (ctx.status = 404);
-
-  const product = await Product.findById(id);
-
-  const updatedProduct = await Product.findByIdAndUpdate(
-    id,
-    { likeCount: product.likeCount + 1 },
-    { new: true },
-  );
-  ctx.body = updatedProduct;
-};

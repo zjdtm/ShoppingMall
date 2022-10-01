@@ -48,19 +48,8 @@ export const Payment = ({ username, total }) => {
     }
 
     const callback =  (response) => {
-    	const {success, error_msg, imp_uid, merchant_uid} = response;
+    	const {success, error_msg} = response;
     	if (success){
-    	// 	  axios({
-			// 	url : "https://api.iamport-dev.co/api/supplements/v1/link/payment",
-			// 	method : "post",
-			// 	headers: { "Content-Type": "application/json" },
-			// 	data: {
-			// 		imp_uid: response.imp_uid,
-			// 		merchant_uid: response.merchant_uid
-			// 	  }
-			// }).then((data) => {
-			// 	console.log("성공 : " + data);
-			// })
 			alert("결제에 성공하였습니다");
 		}else {
 			alert(`결제에 실패하였습니다${error_msg}`);

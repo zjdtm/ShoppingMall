@@ -18,13 +18,6 @@ export const register = async (ctx) => {
   const schema = Joi.object().keys({
     username: Joi.string().alphanum().min(5).max(200).required(),
     password: Joi.string(),
-    // password: JoiPassword.string()
-    //   .minOfSpecialCharacters() // 특수 문자열 최소 수
-    //   .minOfLowercase(1) // 소문자 최수 수
-    //   .minOfUppercase(1) // 대문자 최소 수
-    //   .minOfNumeric(1) // 숫자 최수 소
-    //   .noWhiteSpaces() // 공백이 있는지 없는지 확인
-    //   .required(),
     fullAddress: Joi.string().required(),
     extraAddress: Joi.string().required(),
   });

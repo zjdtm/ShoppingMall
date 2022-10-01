@@ -63,8 +63,8 @@ const Image = styled.img`
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
-  padding: 50px;
+  flex: 0.8;
+  padding: 40px;
   ${tablet({ width : "100vw"})}
 `;
 
@@ -75,8 +75,8 @@ const Title = styled.h1`
 
 const Desc = styled.p`
   margin: 50px 0px;
-  font-size: 17px;
-  font-weight: 450;
+  font-size: 15px;
+  font-weight: 440;
   letter-spacing: 2px;
   color:${props=>props.color};
 `;

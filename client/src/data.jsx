@@ -1,7 +1,7 @@
 export const sliderItems = [
   {
     id: 1,
-    src: "/assets/slider1.jpg",
+    src: "/assets/slider1.webp",
     title: "JORDEN IS ALWAYS RIGHT",
     desc: "마이클 조던",
     textcolor : "black",

@@ -10,15 +10,12 @@ import { composeWithDevTools } from "../node_modules/redux-devtools-extension/in
 import createSagaMiddleware from "redux-saga";
 import rootReducer, { rootSaga } from "./modules/index";
 import { tempSetUser, check } from "./modules/user";
-import { persistStore } from "redux-persist";
-import { PersistGate } from "redux-persist/integration/react";
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(sagaMiddleware))
 );
-const persistor = persistStore(store);
 
 function loadUser() {
   try {
@@ -34,15 +31,12 @@ function loadUser() {
 sagaMiddleware.run(rootSaga);
 loadUser();
 
-// const persistor = persistStore(store);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </PersistGate>
   </Provider>
 );
 
