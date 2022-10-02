@@ -14,11 +14,10 @@ const buttonStyle = css`
   cursor: pointer;
 
   background: ${palette.gray[8]};
-  &:hober {
+  &:hover {
     background: ${palette.gray[6]};
   }
-  ${(props) =>
-    props.fullWidth &&
+  ${(props) => props.fullWidth &&
     css`
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;

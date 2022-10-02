@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import loadingImage from "../../../public/assets/loading.gif"
 
 const Container = styled.div`
     position: absolute;
@@ -25,7 +24,7 @@ export const loading = () => {
   return (
     <Container>
         <Loading>Loading.....</Loading>
-        <img src={loadingImage} alt="로딩화면" width="10%"></img>
+        <img src={process.env.PUBLIC_URL + "/assets/loading.gif"} alt="로딩화면" width="10%"></img>
     </Container>
   )
 }
