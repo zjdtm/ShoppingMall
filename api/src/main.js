@@ -29,7 +29,6 @@ app.use(bodyParser());
 app.use(jwtMiddleware);
 
 // blog-prontend setupProxy로 해결
-// app.use(cors());
 
 router.use('/api', api.routes());
 
