@@ -24,7 +24,7 @@
 </div>
 
 프로젝트 주소 : 
-https://shop-98.herokuapp.com/
+https://shop-98.herokuapp.com/ (현재는 접속 불가)
 
 
 ## 로그인 &  회원가입
